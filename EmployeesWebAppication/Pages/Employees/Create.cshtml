@@ -1,0 +1,32 @@
+﻿@page
+@model EmployeesWebAppication.Pages.Employees.CreateModel
+
+<form method="Post">
+    <input asp-for="Employees.Id" hidden></div>
+    <div style="margin-left:100px">
+         <div>
+        <h1>Create Employee</h1>
+    </div>
+    <br/>
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Employees.Emp_name"></label>
+        <input asp-for="Employees.Emp_name" style="display:block"/>
+        <span asp-validation-for="Employees.Emp_name"></span>
+    </div>
+    <br/>
+    <div>
+        <label asp-for="Employees.Emp_JobTitle"></label>
+            <input asp-for="Employees.Emp_JobTitle" style="display:block"/>
+            <span asp-validation-for="Employees.Emp_JobTitle"></span>
+
+    </div>
+    <br />
+
+    <button type="submit">Create</button>
+    <a asp-page="Index">Back To List</a>
+
+    </div>
+   
+
+</form>

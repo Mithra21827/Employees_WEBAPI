@@ -1,0 +1,43 @@
+﻿@page
+@model EmployeesWebAppication.Pages.Employees.IndexModel
+
+<div>
+    <div>
+        <div style="display: inline-block;">
+            <h1 >Employees List</h1>
+        </div>
+
+        <div style="display: inline-block; padding-left:450px;">
+            <a asp-page="create"><button>Create New Employ</button></a>
+        </div>
+    </div>
+    <table style="width:70%; margin-top:40px">
+        <tr>
+            <th style="padding:10px;">
+                Employ Name
+            </th>
+            <th >
+                Job Title
+            </th>
+            <th></th>
+        </tr>
+       
+            @foreach(var obj in Model.Employees)
+            {
+            <tr>
+                <td>
+                     @obj.Emp_name
+                </td>
+                <td>
+                    @obj.Emp_JobTitle
+                </td>
+                <td>
+                    <a asp-page="Update" asp-route-id="@obj.Id"><button>Edit<buttom/></a>
+                    <a asp-page="Delete" asp-route-id="@obj.Id"><button>Delete<buttom /></a>
+                </td>
+            </tr>
+            }
+            
+       
+    </table>
+</div>

@@ -1,0 +1,19 @@
+﻿@page
+@model EmployeesWebAppication.Pages.Employees.DeleteModel
+
+<form method="Post">
+    <input asp-for="Employees.Id" hidden></div>
+    <div>
+        <h1>Create Employee</h1>
+    </div>
+    <div>
+        <label asp-for="Employees.Emp_name">Employ Name</label>
+        <input asp-for="Employees.Emp_name"/>
+    </div>
+    <div>
+        <label asp-for="Employees.Emp_JobTitle">Job Title</label>
+        <input asp-for="Employees.Emp_JobTitle" />
+    </div>
+    <button type="submit">Delete</button>
+    <a asp-page="Index">Back To List</a>
+</form>
